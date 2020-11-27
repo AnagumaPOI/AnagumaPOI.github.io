@@ -1,13 +1,6 @@
 function show_close(k){
     var e = document.getElementById(k) ;
-    /*
-    if (e.style.display == 'none')
-        e.style.display = 'block';
-    else
-        e.style.display = 'none';
-    */
     var buttons = document.getElementsByTagName("div");
-
     for (var i =0;i<buttons.length;i++){
         if (buttons[i].id != ''){
             if (buttons[i].id==k)
@@ -18,7 +11,15 @@ function show_close(k){
             else
                 buttons[i].style.display = 'none';
         }
-    } 
+    }     
+};
+function small_show_close(k){
+    var e = document.getElementById(k) ;
     
+    if (e.style.display == 'none')
+        e.style.display = 'block';
+    else
+        e.style.display = 'none';
+    document.getElementsById("media").src=document.getElementsById("media").src;
 };
 
