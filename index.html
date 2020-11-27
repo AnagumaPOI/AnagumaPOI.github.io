@@ -5,9 +5,20 @@
     <title>數學家教網站/Tutor for School Math</title>
     <script src="javascript.js"></script>
     <link rel="stylesheet" href="mystyle.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="jquery.media.js"></script>
+    <script>
+        function change_src(button){
+            temp = button.innerHTML;
+            button.insertAdjacentHTML( 'beforeend', ".pdf" )
+            $('#media').attr('src', button.innerHTML);
+            button.innerHTML = temp;
+        };
+    </script>
 </head>
 <body class= "background">
     <h1 class = "title" >數學家教網</h1>
+    <iframe id="media" src="一二次函數圖形.pdf" style="position: absolute;top: 10% ;left: 35%;width: 50vw;height: 80vh;"></iframe> 
     <ul>
         <br><li><button class = "subtitle"onclick="show_close('Panel1')">平台簡介</button></br>
             <div id="Panel1" style="display:none">
@@ -20,15 +31,19 @@
             </div>
         </li>
         <br><li><button class = "subtitle" onclick="show_close('Panel2')">高中(108課綱)</button></br>
+            <!--這裡是註解文字-->
             <div id="Panel2" style="display:none">
-                <div class="shadowbox">
-                    <b class="otherwords"></b>
-                    <ol>第一冊</ol>
-                    <ol>第二冊</ol>
-                    <ol>第三冊</ol>
-                    <ol>第四冊</ol>
-                    
-                </div>
+                
+                <br><button class="list" onclick="small_show_close('smallpanel1')">多項式</button>
+                    <div id="smallpanel1" style="display:none">
+                        <!--<br><button onclick="change_src(this)" class = "last">對數</button>-->
+                        <br><button onclick="change_src(this)" class = "last">多項式定義~除法</button>
+                        <br><button onclick="change_src(this)" class = "last">一二次函數圖形</button>
+                        <br><button onclick="change_src(this)" class = "last">單項和三次函數圖形</button>
+                        <br><button onclick="change_src(this)" class = "last">多項式不等式</button>
+                        <br><button onclick="change_src(this)" class = "last">多項式段考題型整理</button>
+                        <br><button onclick="change_src(this)" class = "last">多項式段考題型整理_詳解</button>
+                    </div>
             </div>
         </li>
         <br><li><button class = "subtitle"onclick="show_close('Panel3')">線上解題</button></br>
@@ -39,9 +54,5 @@
             </div>
         </li>
     </ul>
-
-    <a download target="_blank" href="background.jpg">
-        <div class="imgdownload"><img src="https://img.ruten.com.tw/s2/7/47/7c/22001179076476_101.jPG" alt="Saber" ></div>
-    </a>
 </body>
 </html>
