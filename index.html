@@ -18,32 +18,43 @@
 </head>
 <body class= "background">
     <h1 class = "title" >數學家教網</h1>
-    <iframe id="media" src="一二次函數圖形.pdf" style="position: absolute;top: 10% ;left: 35%;width: 50vw;height: 80vh;"></iframe> 
+    <iframe id="media" src=" " style="position: absolute;top: 10% ;left: 35%;width: 50vw;height: 80vh;"></iframe> 
     <ul>
         <br><li><button class = "subtitle"onclick="show_close('Panel1')">平台簡介</button></br>
             <div id="Panel1" style="display:none">
-                <div class="shadowbox">
-                    <b class="otherwords">這是由 許哲瑋 先生獨立創建的網站，用於存放部分教學資源，以利家教學生下載、閱讀。
-                        <br></br>
-                        由於是自學使用html、js、css編寫，若遇到bug等問題全屬正常，還請多加包容。
-                    </b>
-                </div>
+
+                <br><button class="list" onclick="small_show_close('smallpanel1')">前言/使用說明</button>
+                    <div id = "smallpanel1" class="blackboard" style="display: none;">
+                        <b class="otherwords" style="color: white; ">
+                            <br></br>&emsp;&emsp;這是由 許哲瑋 先生獨立創建的網站
+                            <br></br>&emsp;&emsp;用於存放部分教學資源，以利家教學生下載、閱讀
+                            <br></br>&emsp;&emsp;今後將不定期更新網站資源、功能
+                            <br></br>
+                            <br></br>&emsp;&emsp;使用說明:
+                            <br></br>&emsp;&emsp;請在左側選單，選擇想要的章節後點擊
+                            <br></br>&emsp;&emsp;該章節的pdf檔案將預覽在這篇文章的位置
+                            <br></br>&emsp;&emsp;(註：手機無法預覽pdf，需要下載方能觀看)
+                            <br></br>
+                            <br></br>&emsp;&emsp;由於是自學使用html、js、css編寫，若遇到bug等問題全屬正常，還請多加包容
+                        </b>
+                    </div>
             </div>
         </li>
         <br><li><button class = "subtitle" onclick="show_close('Panel2')">高中(108課綱)</button></br>
             <!--這裡是註解文字-->
             <div id="Panel2" style="display:none">
                 
-                <br><button class="list" onclick="small_show_close('smallpanel1')">多項式</button>
-                    <div id="smallpanel1" style="display:none">
+                <br><button class="list" onclick="small_show_close('smallpanel2')">多項式</button>
+                    <div id="smallpanel2" style="display:none">
                         <!--<br><button onclick="change_src(this)" class = "last">對數</button>-->
                         <br><button onclick="change_src(this)" class = "last">多項式定義~除法</button>
                         <br><button onclick="change_src(this)" class = "last">一二次函數圖形</button>
                         <br><button onclick="change_src(this)" class = "last">單項和三次函數圖形</button>
                         <br><button onclick="change_src(this)" class = "last">多項式不等式</button>
                         <br><button onclick="change_src(this)" class = "last">多項式段考題型整理</button>
-                        <br><button onclick="change_src(this)" class = "last">多項式段考題型詳解</button>
+                        <br><button onclick="change_src(this)" class = "last">多項式段考題型整理_詳解</button>
                     </div>
+
             </div>
         </li>
         <br><li><button class = "subtitle"onclick="show_close('Panel3')">線上解題</button></br>
