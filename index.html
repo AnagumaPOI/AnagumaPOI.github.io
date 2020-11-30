@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>數學家教網站/Tutor for School Math</title>
+    <script src="javascript.js"></script>
+    <link rel="stylesheet" href="mystyle.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="jquery.media.js"></script>
+    <script>
+        function change_src(button){
+            temp = button.innerHTML;
+            button.insertAdjacentHTML( 'beforeend', ".pdf" )
+            $('#media').attr('src', button.innerHTML);
+            button.innerHTML = temp;
+        };
+    </script>
+</head>
+<body class= "background">
+    <h1 class = "title" >數學家教網</h1>
+    <iframe id="media" src=" " style="position: absolute;top: 10% ;left: 35%;width: 50vw;height: 500px;"></iframe> 
+    <ul>
+        <br><li><button class = "subtitle"onclick="show_close('Panel1',this)">老師和平台</button></br>
+            <div id="Panel1" style="display:none">
+
+                <br><button class="list" onclick="intro_show_close('smallpanel1')">前言/使用說明</button>
+                    <div id = "smallpanel1" class="blackboard" style="display: none;">
+                        <b class="otherwords" style="color: white; ">
+                            <br></br>&emsp;&emsp;這是由 許哲瑋 先生獨立創建的網站
+                            <br></br>&emsp;&emsp;用於存放部分教學資源，以利家教學生下載、閱讀
+                            <br></br>&emsp;&emsp;今後將不定期更新網站資源、功能
+                            <br></br>
+                            <br></br>&emsp;&emsp;<u style="color:wheat">教材使用說明:</u>
+                            <br></br>&emsp;&emsp;請在左側選單，選擇想要的章節後點擊
+                            <br></br>&emsp;&emsp;該章節的pdf檔案將預覽在這篇文章的位置
+                            <br></br>&emsp;&emsp;(註：手機無法預覽pdf，需要下載方能觀看)
+                            <br></br>
+                            <br></br>&emsp;&emsp;由於是自學使用html、js、css編寫，若遇到bug等問題全屬正常，還請多加包容
+                        </b>
+                    </div>
+
+                <br><button class="list" onclick="intro_show_close('smallpanel12')">老師簡介</button>
+                    <div id = "smallpanel12" class="blackboard" style="display: none;">
+                        <b class="otherwords" style="color: white; ">
+                            <img src="head.jpg" alt="head_photo" title="許哲瑋" style="left: 75% ;top: 5%; position: absolute; width: 140px;height: 150px;">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7e/National_Taiwan_University_seal.svg/1200px-National_Taiwan_University_seal.svg.png" 
+                            alt="ntu_logo" title="NTU" style="left: 75% ;top: 40%; position: absolute; width: 140px;height: 140px;">
+                            <br>&emsp;&emsp;<u style="color:wheat">簡介：</u>
+                            <br></br>&emsp;&emsp;姓名：許哲瑋
+                            <br></br>&emsp;&emsp;年資：5年國高中數理
+                            <br></br>&emsp;&emsp;學生數：現有：4 人 / 總數：19 人
+                            <br></br>&emsp;&emsp;居住地：台北市內湖區
+                            <br></br>&emsp;&emsp;學歷：華興中學 => 建國中學 => 台灣大學土木工程學系
+                            <br>
+                            <br></br>&emsp;&emsp;<u style="color:wheat">聯絡資訊：</u>
+                            <br></br>&emsp;&emsp;行動電話/LineID：0975058607
+                            <br></br>&emsp;&emsp;E-mail：dodonharry34@gmail.com / B06501010@ntu.edu.tw
+                            <br></br>&emsp;&emsp;時段：9:00 AM - 12:00 PM
+                        </b>
+                    </div>
+
+                <br><a style="color: black; margin-left: 5px; font-weight: bold;"
+                 href="https://tutor.104.com.tw/dsp_tu_info.cfm?id=1876504" target="_blank" >104家教頁面</a>
+
+                <br><a style="color: black; margin-left: 5px; font-weight: bold;"
+                 href="https://tutor.1111.com.tw/teacher/teacherDetail.asp?tNo=4605851217179752697653833416718397834832168668" target="_blank" >1111家教頁面</a>
+                    
+            </div>
+        </li>
+        <br><li><button class = "subtitle" onclick="show_close('Panel2',this)">高中(108課綱)</button></br>
+            <!--這裡是註解文字-->
+            <div id="Panel2" style="display:none">
+                
+                <br><button class="list" onclick="embedded_show_close('smallpanel2')">多項式</button>
+                    <div id="smallpanel2" style="display:none">
+                        <!--<br><button onclick="change_src(this)" class = "last">對數</button>-->
+                        <br><button onclick="change_src(this)" class = "last">多項式定義~除法</button>
+                        <br><button onclick="change_src(this)" class = "last">一二次函數圖形</button>
+                        <br><button onclick="change_src(this)" class = "last">單項和三次函數圖形</button>
+                        <br><button onclick="change_src(this)" class = "last">多項式不等式</button>
+                        <br><button onclick="change_src(this)" class = "last">多項式段考題型整理</button>
+                        <br><button onclick="change_src(this)" class = "last">多項式段考題型詳解</button>
+                    </div>
+
+            </div>
+        </li>
+        <br><li><button class = "subtitle"onclick="show_close('Panel3')">線上解題</button></br>
+            <div id="Panel3" style="display:none">
+                <br><b class="otherwords">此功能尚在開發中......2020/11/26</b>
+            </div>
+        </li>
+    </ul>
+</body>
+</html>
